@@ -1,0 +1,273 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Roboto', sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background-image:url("../IMG/i.png");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    color:white;
+    transition:0.4s;
+}
+
+/* NAVBAR */
+
+.navbar{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    backdrop-filter:blur(10px);
+    background:rgba(255,0,0,.45);
+
+    z-index:1000;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+}
+
+.menu{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+.menu a{
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+    transition:.3s;
+}
+
+.menu a:hover{
+    color:#ffd1d1;
+}
+
+.acciones{
+    display:flex;
+    gap:10px;
+    align-items:center;
+}
+
+#themeBtn{
+    border:none;
+    background:white;
+    border-radius:50%;
+    width:45px;
+    height:45px;
+    cursor:pointer;
+    font-size:18px;
+}
+
+.login-btn{
+    text-decoration:none;
+    background:white;
+    color:#fd4646;
+    padding:10px 20px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.login-btn:hover{
+    background:#fd4646;
+    color:white;
+}
+
+/* HERO */
+
+.hero{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero-content{
+    max-width:800px;
+
+    backdrop-filter:blur(10px);
+    background:rgba(0,0,0,.45);
+
+    padding:50px;
+    border-radius:20px;
+}
+
+.hero h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+.btn{
+    text-decoration:none;
+    color:white;
+    background:#fd4646;
+    padding:12px 25px;
+    border-radius:10px;
+}
+
+.btn:hover{
+    background:white;
+    color:#fd4646;
+}
+
+/* SECCIONES */
+
+.section{
+    margin:30px;
+    padding:80px 10%;
+
+    backdrop-filter:blur(10px);
+    background:rgba(0,0,0,.45);
+
+    border-radius:20px;
+}
+
+.section h2{
+    text-align:center;
+    color:#fd4646;
+    margin-bottom:25px;
+}
+
+.section p{
+    text-align:center;
+    line-height:1.8;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    
+    background:white;
+    color:#333;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+
+    transition:.3s;
+     display: flex;
+    flex-direction: column;
+    height: 100%; /* O una altura fija como height: 400px; */
+
+}
+
+.card .img-pro .title{
+    font-weight: bold;
+    text-align: left;
+    font-size: 25px;
+}
+
+.section .card .title-pro {
+    font-size: 40px;
+}
+
+.card .img-pro .text {
+    padding-top: 20px;
+    text-align: left;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.btn-pro {
+    text-decoration: none;
+    color: white;
+    background: #fd4646;
+    padding: 12px 25px;
+    border-radius: 10px;
+    margin-bottom: -150px;
+    margin-left: 300px;
+}
+
+
+.contacto p{
+    margin:10px 0;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    backdrop-filter:blur(10px);
+    background:rgba(255,0,0,.45);
+}
+
+/* MODO CLARO */
+
+body.light-mode{
+    background:#f5f5f5;
+    background-image:none;
+    color:#222;
+}
+
+body.light-mode .navbar{
+    background:rgba(0, 0, 0, 0.45);
+    
+}
+
+body.light-mode .logo,
+body.light-mode .menu a{
+    color:#fff;
+}
+
+body.light-mode .hero-content{
+    background:rgba(255,255,255,.9);
+    color:#222;
+}
+
+body.light-mode .section{
+    background:rgba(255,255,255,.9);
+    color:#222;
+}
+
+body.light-mode footer{
+    background:rgba(255,255,255,.9);
+    color:#222;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .menu{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:35px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+}
