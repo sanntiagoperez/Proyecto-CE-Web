@@ -18,7 +18,9 @@ body{
     transition:0.4s;
 }
 
-/* NAVBAR */
+/* ===========================
+   NAVBAR
+=========================== */
 
 .navbar{
     position:fixed;
@@ -28,10 +30,8 @@ body{
     display:flex;
     justify-content:space-between;
     align-items:center;
-
     backdrop-filter:blur(10px);
     background:rgba(255,0,0,.45);
-
     z-index:1000;
 }
 
@@ -87,7 +87,9 @@ body{
     color:white;
 }
 
-/* HERO */
+/* ===========================
+   HERO
+=========================== */
 
 .hero{
     height:100vh;
@@ -100,10 +102,8 @@ body{
 
 .hero-content{
     max-width:800px;
-
     backdrop-filter:blur(10px);
     background:rgba(0,0,0,.45);
-
     padding:50px;
     border-radius:20px;
 }
@@ -124,6 +124,7 @@ body{
     background:#fd4646;
     padding:12px 25px;
     border-radius:10px;
+    transition:.3s;
 }
 
 .btn:hover{
@@ -131,216 +132,340 @@ body{
     color:#fd4646;
 }
 
-/* SECCIONES */
+/* ===========================
+   SECCIONES
+=========================== */
 
 .section{
     margin:30px;
     padding:80px 10%;
-
     backdrop-filter:blur(10px);
     background:rgba(0,0,0,.45);
-
     border-radius:20px;
 }
 
 .section h2{
     text-align:center;
     color:#fd4646;
-    margin-bottom:25px;
+    margin-bottom:35px;
+    font-size:45px;
 }
 
 .section p{
-    text-align:center;
     line-height:1.8;
 }
 
+/* ===========================
+   TARJETAS MAQUINARIA
+=========================== */
+
 .cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+    display:flex;
 }
 
 .card{
-    background:white;
-    color:#333;
-    padding:15px;
-    border-radius:5px;
-    text-align:center;
 
-    transition:.3s;
+    background:#fff;
+    color:#333;
+
+    width:420px;
+    min-height:560px;
+
+    border-radius:18px;
+
+    padding:25px;
+
     display:flex;
     flex-direction:column;
-    height: 100%;
-}
+    justify-content:space-between;
 
-.card .img-pro .title{
-    font-weight:bold;
-    text-align:left;
-    font-size:20px;
-}
-.card .img-pro img{
-    width:50px;
-    height:40px;
-    object-fit:contain;
-    display:block;
-    margin:8px auto 0px;
-}
-.card .img-pro .title{
-    font-size:18px;
-}
-
-.card .img-pro .text{
-    font-size:24px;
+    transition:.3s;
 }
 
 .card:hover{
-    transform:translateY(-10px);
+    transform:translateY(-8px);
 }
 
-.btn-pro{
-    text-decoration:none;
-    color:white;
-    background:#fd4646;
-    padding:12px 25px;
-    border-radius:10px;
-    margin-bottom:-150px;
-    margin-left:300px;
+.img-pro{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 }
 
-.contacto p{
-    margin:10px 0;
+.img-pro img{
+
+    width:260px;
+    height:200px;
+
+    object-fit:contain;
+
+    margin-bottom:20px;
 }
 
-footer{
-    text-align:center;
-    padding:20px;
-    backdrop-filter:blur(10px);
-    background:rgba(255,0,0,.45);
+.card .title{
+
+    width:100%;
+
+    text-align:left;
+
+    font-size:26px;
+
+    font-weight:bold;
+
+    margin-bottom:15px;
+}
+
+.card .text{
+
+    width:100%;
+
+    text-align:justify;
+
+    font-size:17px;
+
+    line-height:1.7;
+
+    flex:1;
 }
 /* ===========================
+   BOTÓN LEER MÁS
+=========================== */
+
+.btn-pro{
+
+    display:block;
+
+    width:170px;
+
+    margin:25px auto 0;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    background:#fd4646;
+
+    color:#fff;
+
+    padding:12px 20px;
+
+    border-radius:10px;
+
+    font-weight:bold;
+
+    transition:.3s;
+}
+
+.btn-pro:hover{
+
+    background:#b90000;
+
+    color:#fff;
+}
+
+/* ===========================
+   CARRUSEL
+=========================== */
+
+.carrusel{
+
+    position:relative;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+.carrusel .cards{
+
+    width:450px;
+
+    overflow:hidden;
+
+    display:flex;
+
+    scroll-behavior:smooth;
+}
+
+.carrusel .card{
+
+    min-width:100%;
+
+    flex-shrink:0;
+}
+
+/* ===========================
+   FLECHAS
+=========================== */
+
+.prev,
+.next{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#fd4646;
+
+    color:white;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    z-index:100;
+}
+
+.prev{
+
+    left:10%;
+}
+
+.next{
+
+    right:10%;
+}
+
+.prev:hover,
+.next:hover{
+
+    background:white;
+
+    color:#fd4646;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+
+    text-align:center;
+
+    padding:20px;
+
+    backdrop-filter:blur(10px);
+
+    background:rgba(255,0,0,.45);
+}
+
+/* ===========================
    MODO CLARO
-   =========================== */
+=========================== */
 
 body.light-mode{
+
     background:#f5f5f5;
+
     background-image:none;
+
     color:#222;
 }
 
 body.light-mode .navbar{
+
     background:rgba(255,255,255,.9);
 }
 
 body.light-mode .logo,
 body.light-mode .menu a{
+
     color:#222;
 }
 
 body.light-mode .hero-content{
+
     background:rgba(255,255,255,.9);
+
     color:#222;
 }
 
 body.light-mode .section{
+
     background:rgba(255,255,255,.9);
+
     color:#222;
 }
 
 body.light-mode footer{
+
     background:rgba(255,255,255,.9);
+
     color:#222;
 }
 
 /* ===========================
-   CARRUSEL
-   =========================== */
-
-.carrusel{
-    position:relative;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-
-.carrusel .cards{
-    display:flex;
-    gap:20px;
-    overflow-x:hidden;
-    scroll-behavior:smooth;
-    width:80%;
-}
-
-.carrusel .card{
-    min-width:calc(33.33% - 14px);
-    flex-shrink:0;
-    max-width: 350px;  
-    margin: 0 auto;
-}
-
-.prev,
-.next{
-    position:absolute;
-    top:50%;
-    transform:translateY(-50%);
-    width:45px;
-    height:45px;
-    border:none;
-    border-radius:50%;
-    background:#fd4646;
-    color:#fff;
-    font-size:25px;
-    cursor:pointer;
-    transition:.3s;
-    z-index:100;
-}
-
-.prev{
-    left:-20px;
-}
-
-.next{
-    right:-20px;
-}
-
-.prev:hover,
-.next:hover{
-    background:#fff;
-    color:#fd4646;
-}
-
-/* ===========================
    RESPONSIVE
-   =========================== */
+=========================== */
 
 @media(max-width:768px){
 
     .navbar{
+
         flex-direction:column;
+
         gap:15px;
     }
 
     .menu{
+
         flex-wrap:wrap;
+
         justify-content:center;
     }
 
     .hero h1{
+
         font-size:35px;
     }
 
     .hero p{
+
         font-size:16px;
     }
 
-    .carrusel .card{
-        min-width:100%;
+    .carrusel .cards{
+
+        width:95%;
     }
 
-    .prev,
+    .card{
+
+        width:100%;
+
+        min-height:auto;
+    }
+
+    .img-pro img{
+
+        width:220px;
+
+        height:170px;
+    }
+
+    .prev{
+
+        left:5px;
+    }
+
     .next{
-        width:40px;
-        height:40px;
-        font-size:20px;
-    }
 
+        right:5px;
+    }
 }
