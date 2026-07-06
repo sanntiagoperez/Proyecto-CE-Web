@@ -161,7 +161,6 @@ body{
 }
 
 .card{
-    
     background:white;
     color:#333;
     padding:25px;
@@ -169,41 +168,39 @@ body{
     text-align:center;
 
     transition:.3s;
-     display: flex;
-    flex-direction: column;
-    height: 100%; /* O una altura fija como height: 400px; */
-
+    display:flex;
+    flex-direction:column;
+    height:100%;
 }
 
 .card .img-pro .title{
-    font-weight: bold;
-    text-align: left;
-    font-size: 25px;
+    font-weight:bold;
+    text-align:left;
+    font-size:25px;
 }
 
-.section .card .title-pro {
-    font-size: 40px;
+.section .card .title-pro{
+    font-size:40px;
 }
 
-.card .img-pro .text {
-    padding-top: 20px;
-    text-align: left;
+.card .img-pro .text{
+    padding-top:20px;
+    text-align:left;
 }
 
 .card:hover{
     transform:translateY(-10px);
 }
 
-.btn-pro {
-    text-decoration: none;
-    color: white;
-    background: #fd4646;
-    padding: 12px 25px;
-    border-radius: 10px;
-    margin-bottom: -150px;
-    margin-left: 300px;
+.btn-pro{
+    text-decoration:none;
+    color:white;
+    background:#fd4646;
+    padding:12px 25px;
+    border-radius:10px;
+    margin-bottom:-150px;
+    margin-left:300px;
 }
-
 
 .contacto p{
     margin:10px 0;
@@ -215,8 +212,9 @@ footer{
     backdrop-filter:blur(10px);
     background:rgba(255,0,0,.45);
 }
-
-/* MODO CLARO */
+/* ===========================
+   MODO CLARO
+   =========================== */
 
 body.light-mode{
     background:#f5f5f5;
@@ -225,13 +223,12 @@ body.light-mode{
 }
 
 body.light-mode .navbar{
-    background:rgba(0, 0, 0, 0.45);
-    
+    background:rgba(255,255,255,.9);
 }
 
 body.light-mode .logo,
 body.light-mode .menu a{
-    color:#fff;
+    color:#222;
 }
 
 body.light-mode .hero-content{
@@ -249,7 +246,64 @@ body.light-mode footer{
     color:#222;
 }
 
-/* RESPONSIVE */
+/* ===========================
+   CARRUSEL
+   =========================== */
+
+.carrusel{
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.carrusel .cards{
+    display:flex;
+    gap:20px;
+    overflow-x:hidden;
+    scroll-behavior:smooth;
+    width:100%;
+}
+
+.carrusel .card{
+    min-width:calc(33.33% - 14px);
+    flex-shrink:0;
+}
+
+.prev,
+.next{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:45px;
+    height:45px;
+    border:none;
+    border-radius:50%;
+    background:#fd4646;
+    color:#fff;
+    font-size:25px;
+    cursor:pointer;
+    transition:.3s;
+    z-index:100;
+}
+
+.prev{
+    left:-20px;
+}
+
+.next{
+    right:-20px;
+}
+
+.prev:hover,
+.next:hover{
+    background:#fff;
+    color:#fd4646;
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
 
 @media(max-width:768px){
 
@@ -270,4 +324,16 @@ body.light-mode footer{
     .hero p{
         font-size:16px;
     }
+
+    .carrusel .card{
+        min-width:100%;
+    }
+
+    .prev,
+    .next{
+        width:40px;
+        height:40px;
+        font-size:20px;
+    }
+
 }
