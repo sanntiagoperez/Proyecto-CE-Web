@@ -135,7 +135,7 @@ themeBtn.addEventListener("click", () => {
 
     if(document.body.classList.contains("light-mode")){
 
-        themeBtn.textContent = "🌙";
+        themeBtn.textContent = "☀️";
 
         localStorage.setItem(
             "theme",
@@ -144,7 +144,7 @@ themeBtn.addEventListener("click", () => {
 
     }else{
 
-        themeBtn.textContent = "☀️";
+        themeBtn.textContent = "🌙";
 
         localStorage.setItem(
             "theme",

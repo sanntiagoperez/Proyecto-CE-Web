@@ -5,10 +5,10 @@ themeBtn.addEventListener("click", () => {
     document.body.classList.toggle("light-mode");
 
     if(document.body.classList.contains("light-mode")){
-        themeBtn.textContent = "🌙";
+        themeBtn.textContent = "☀️";
         localStorage.setItem("theme","light");
     }else{
-        themeBtn.textContent = "☀️";
+        themeBtn.textContent = "🌙";
         localStorage.setItem("theme","dark");
     }
 
@@ -19,32 +19,38 @@ if(localStorage.getItem("theme") === "light"){
     themeBtn.textContent = "☀️";
 }
 // ============================
-// CARRUSEL MAQUINARIA
+// CARRUSELES (Maquinaria, Herramientas, etc.)
 // ============================
+// Se busca cada bloque .carrusel presente en la página y se le
+// engancha su propio prev/next, para que funcionen de forma
+// independiente sin importar cuántos carruseles haya.
 
-const cards = document.getElementById("cards");
-const next = document.getElementById("next");
-const prev = document.getElementById("prev");
+const carruseles = document.querySelectorAll(".carrusel");
 
-if (cards && next && prev) {
+carruseles.forEach((carrusel) => {
 
-    const mover = () => {
-        const card = cards.querySelector(".card");
-        return card.offsetWidth + 20;
-    };
+    const track = carrusel.querySelector(".cards");
+    const next = carrusel.querySelector(".next");
+    const prev = carrusel.querySelector(".prev");
+
+    if (!track || !next || !prev) return;
+
+    // Avanza/retrocede el ancho visible del track (3 tarjetas + sus gaps),
+    // de modo que cada clic mueve exactamente "una página" del carrusel.
+    const mover = () => track.clientWidth;
 
     next.addEventListener("click", () => {
-        cards.scrollBy({
+        track.scrollBy({
             left: mover(),
             behavior: "smooth"
         });
     });
 
     prev.addEventListener("click", () => {
-        cards.scrollBy({
+        track.scrollBy({
             left: -mover(),
             behavior: "smooth"
         });
     });
 
-}
+});
