@@ -217,6 +217,7 @@ main{
 }
 
 /* ========================= */
+<<<<<<< HEAD
 /* MODO CLARO */
 /* ========================= */
 
@@ -247,6 +248,19 @@ body.light-mode .caja__trasera div{
 
 body.light-mode .contenedor__login-register form{
     background: white;
+=======
+/* MODO OSCURO: la foto siempre se ve, el rojo queda   */
+/* solo en los botones; navbar y caja__trasera pasan   */
+/* a negro                                             */
+/* ========================= */
+
+body.dark-mode .navbar{
+    background: rgba(0,0,0,.6);
+}
+
+body.dark-mode .caja__trasera{
+    background-color: rgba(0, 0, 0, .6);
+>>>>>>> 8ec5390b618fb253d49405857027bf26ce88d079
 }
 
 /* ========================= */
