@@ -26,7 +26,7 @@ Sistema web para la gestión de maquinaria, herramientas y recursos, desarrollad
 - JavaScript
 
 ### Base de Datos
-- MySQL
+- Postgres
 
 ### Herramientas
 - Git
