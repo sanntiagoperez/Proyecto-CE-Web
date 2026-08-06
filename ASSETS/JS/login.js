@@ -1,4 +1,5 @@
 // =========================
+<<<<<<< HEAD
 // SI YA HAY SESIÓN ACTIVA, NO MOSTRAR EL LOGIN
 // =========================
 
@@ -7,6 +8,8 @@ if(typeof ceObtenerSesion === "function" && ceObtenerSesion()){
 }
 
 // =========================
+=======
+>>>>>>> c5cbfafa85d7195ff2cdc21bc75bce09bc34d283
 // BOTONES LOGIN Y REGISTRO
 // =========================
 
@@ -132,6 +135,7 @@ function register(){
 }
 
 // =========================
+<<<<<<< HEAD
 // LOGIN / REGISTRO FUNCIONALES
 // =========================
 
@@ -224,6 +228,8 @@ formularioRegistro.addEventListener("submit", (e) => {
 });
 
 // =========================
+=======
+>>>>>>> c5cbfafa85d7195ff2cdc21bc75bce09bc34d283
 // CAMBIO DE TEMA
 // =========================
 
